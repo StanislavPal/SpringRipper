@@ -6,12 +6,17 @@
 <!--        xmlns:context="http://www.springframework.org/schema/p">-->
 
 
+
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 <!--    <context:annotaion-config></context:annotaion-config>-->
 
     <bean class="quoters.TerminatorQuoter" id="terminatorQuoter"
             init-method="initXmlMethod">
         <property name="message" value="I'll be back! (c)"/>
+    </bean>
+
+    <bean class="quoters.HamletQuoter" id="hamletQuoter">
+        <property name="message" value="To be or not to be?"/>
     </bean>
 
     <bean class="quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
