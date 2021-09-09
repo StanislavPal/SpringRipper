@@ -12,7 +12,7 @@ public class TerminatorQuoter implements Quoter, InitializingBean {
     private String message;
 
     public TerminatorQuoter() {
-        System.out.println("Phase 1");
+        System.out.print("Phase 1: ");
         System.out.println("TerminatorQuoter.Constructor");
         System.out.println("repit = " + repit);
     }
@@ -30,21 +30,21 @@ public class TerminatorQuoter implements Quoter, InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
+        System.out.print("Phase 2: ");
         System.out.println("TerminatorQuoter.afterPropertiesSet");
-        System.out.println(initXmlMethod());
-        System.out.println(initAnnotationMethod());
-        System.out.println("TerminatorQuoter.afterPropertiesSet===");
+        System.out.println("repit = " + repit);
     }
 
-    private String initXmlMethod() {
+    private void initXmlMethod() {
+        System.out.print("Phase 2: ");
         System.out.println("TerminatorQuoter.initXmlMethod");
-        return "return: String from initXmlMethod";
+        System.out.println("repit = " + repit);
     }
 
     @PostConstruct
-    private String initAnnotationMethod() {
-        System.out.println("Phase 2");
+    private void initAnnotationMethod() {
+        System.out.print("Phase 2: ");
         System.out.println("TerminatorQuoter.initAnnotationMethod");
-        return "return: String from initAnnotationMethod";
+        System.out.println("repit = " + repit);
     }
 }
